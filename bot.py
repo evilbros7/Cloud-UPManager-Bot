@@ -755,7 +755,7 @@ async def button(bot, data: CallbackQuery):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [InlineKeyboardButton("📖Open Link📖", url=download_link)],
-                            [InlineKeyboardButton("❌Delete File❌", callback_data="deletestream")]
+                            [InlineKeyboardButton("Delete File", callback_data="deletestream")]
                         ]
                     )
                 )
