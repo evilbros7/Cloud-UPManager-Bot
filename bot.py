@@ -720,7 +720,7 @@ async def button(bot, data: CallbackQuery):
             file_name=dl_loc,
             progress=progress_for_pyrogram,
             progress_args=(
-                "Download kortasi ...",
+                "Downloading Please Wait ⌛",
                 a,
                 c_time
             )
@@ -749,19 +749,19 @@ async def button(bot, data: CallbackQuery):
                 return
             else:
                 await data.message.reply_to_message.reply_text(
-                    f"**File Name:** `{filename}`\n\n**Download Link:** `{download_link}`",
+                    f"**File Name🎬 :** `{filename}`\n\n**Download Link 🔗:** `{download_link}`",
                     parse_mode="Markdown",
                     disable_web_page_preview=True,
                     reply_markup=InlineKeyboardMarkup(
                         [
-                            [InlineKeyboardButton("Open Link", url=download_link)],
-                            [InlineKeyboardButton("Delete File", callback_data="deletestream")]
+                            [InlineKeyboardButton("📖Open Link📖", url=download_link)],
+                            [InlineKeyboardButton("❌Delete File❌", callback_data="deletestream")]
                         ]
                     )
                 )
                 forwarded_msg = await data.message.reply_to_message.forward(Config.LOG_CHANNEL)
                 await bot.send_message(chat_id=Config.LOG_CHANNEL,
-                                       text=f"#STREAMTAPE_UPLOAD:\n\n[{data.from_user.first_name}](tg://user?id={data.from_user.id}) Uploaded to Streamtape !!\n\n**URL:** {download_link}",
+                                       text=f"#UPLOADED:\n\n**File Name🎬 :** `{filename}`\n\n[{data.from_user.first_name}](tg://user?id={data.from_user.id}) Uploaded to Streamtape !!\n\n**URL:** {download_link}",
                                        reply_to_message_id=forwarded_msg.message_id, parse_mode="Markdown",
                                        disable_web_page_preview=True)
 
