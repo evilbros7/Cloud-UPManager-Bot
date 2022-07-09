@@ -1,4 +1,4 @@
-# (c) @AbirHasan2005
+
 
 import os
 
@@ -15,16 +15,11 @@ class Config(object):
 	LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL"))
 	DOWNLOAD_DIR = os.environ.get("DOWNLOAD_DIR", "./downloads")
 	HELP_TEXT = """
-Send me any Media & Choose Upload Server,
+Send me any Media & Choose Streamtape Server,
 I will Upload the Media to that server.
 
-Currently I can Upload to:
-> GoFile.io
-> Streamtape.com
-> Pixeldrain.com
-
-Also I can do a lot of things from Inline!
-__Check Below Buttons >>>__
+Don't Forget To Join Our Channel 
+__Check Below Button >>>__
 """
 	PROGRESS = """
 Percentage : {0}%
